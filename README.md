@@ -10,5 +10,6 @@ The current implementations are:
 
 ### Sorts
 
-- QuickSort
-- MergeSort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
