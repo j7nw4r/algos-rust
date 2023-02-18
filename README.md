@@ -1,2 +1,14 @@
 # algos-rust
-Implementing various algorithms in rust.
+
+## Purpose
+
+This repository contains implementation of common algorithms in rust.
+
+## Implementations
+
+The current implementations are:
+
+### Sorts
+
+- QuickSort
+- MergeSort
