@@ -20,13 +20,12 @@ fn merge_sort<T: Ord + Copy>(arr: Vec<T>) -> Vec<T> {
     let mid = arr.len() / 2;
     let l = merge_sort(arr[..mid].to_vec());
     let r = merge_sort(arr[mid..].to_vec());
-    let result = merge(l, r);
-
-    return result;
+    merge(l, r)
 }
 
 fn merge<T: Ord + Copy>(mut l: Vec<T>, mut r: Vec<T>) -> Vec<T> {
     let mut result = Vec::new();
+
     while l.len() > 0 && r.len() > 0 {
         if r.first().unwrap() > l.first().unwrap() {
             let elem = l[0];
