@@ -1,5 +1,3 @@
-use std::fmt::Debug;
-
 mod tests {
     #[test]
     fn run_tests() {
@@ -10,11 +8,11 @@ mod tests {
     }
 }
 
-pub fn sort<T: Ord + Clone + Debug + Copy>(arr: Vec<T>) -> Vec<T> {
+pub fn sort<T: Ord + Copy>(arr: Vec<T>) -> Vec<T> {
     merge_sort(arr)
 }
 
-fn merge_sort<T: Ord + Clone + Debug + Copy>(arr: Vec<T>) -> Vec<T> {
+fn merge_sort<T: Ord + Copy>(arr: Vec<T>) -> Vec<T> {
     if arr.len() < 2 {
         return arr.to_vec();
     }
@@ -27,7 +25,7 @@ fn merge_sort<T: Ord + Clone + Debug + Copy>(arr: Vec<T>) -> Vec<T> {
     return result;
 }
 
-fn merge<T: Ord + Debug + Copy>(mut l: Vec<T>, mut r: Vec<T>) -> Vec<T> {
+fn merge<T: Ord + Copy>(mut l: Vec<T>, mut r: Vec<T>) -> Vec<T> {
     let mut result = Vec::new();
     while l.len() > 0 && r.len() > 0 {
         if r.first().unwrap() > l.first().unwrap() {

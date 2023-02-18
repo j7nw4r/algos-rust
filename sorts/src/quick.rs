@@ -12,11 +12,11 @@ mod tests {
     }
 }
 
-pub fn sort<T: Ord + Debug>(arr: &mut [T]) {
+pub fn sort<T: Ord>(arr: &mut [T]) {
     quick_sort(arr, 0, arr.len() - 1);
 }
 
-fn quick_sort<T: Ord + Debug>(arr: &mut [T], start: usize, end: usize) {
+fn quick_sort<T: Ord>(arr: &mut [T], start: usize, end: usize) {
     if arr.len() == 0 || arr.len() == 1 {
         return;
     }
