@@ -7,7 +7,7 @@ mod tests {
 
         super::sort(&mut input);
 
-        assert_eq!(input, output[..])
+        assert_eq!(input, output)
     }
 }
 
