@@ -4,7 +4,7 @@ mod tests {
         let input = [3u32, 2, 1, 4, 26, 17];
         let output = [1u32, 2, 3, 4, 17, 26];
         let result = super::sort(input.to_vec());
-        assert_eq!(result[..], output[..])
+        assert_eq!(result, output)
     }
 }
 
